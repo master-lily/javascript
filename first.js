@@ -55,9 +55,9 @@ function zeroCounterDisplay(){
 }
 
 //1.1. Даны три целых числа. Придумайте алгоритм, определяющий, есть ли среди чисел одинаковые или нет. - Правильно
-var equalnumbers = [5,6,6]
+var equalNumbers = [5,6,6]
 function printEqualElements () {
-    if (equalnumbers[0] === equalnumbers[1] || equalnumbers[0] === equalnumbers[2] || equalnumbers[1] === equalnumbers[2]){
+    if (equalNumbers[0] === equalNumbers[1] || equalNumbers[0] === equalNumbers[2] || equalNumbers[1] === equalNumbers[2]){
         console.log("Equal");
     }
     else
@@ -90,15 +90,16 @@ function zeroCounterDisplay() {
 // определить массив, с которым будем производить операции???
 
 var array =[3,5,7,2,4,0,6,6,8]
-var  max = array[0];
-count = 0;
+
 function printMathMax(){
+    var  max = array[0];
+    var count = 0;
     for (var i = 0; i<array.length; i++){
         if(array[i]>max){
             max = array[i];
 
         }
-        count = 0;
+       var count = 0;
         for (j=0; j<max.length; j++) {
             count++;
         }
@@ -108,14 +109,14 @@ function printMathMax(){
 
 //1.4. Напишите программу, печатающее на экран красивое поздравление с новым учебным годом. - Правильно
 function congratulation(){
-    console.log("Congratulations with beginning of new studt year!")
+    console.log("Congratulations with beginning of new studying year!")
 }
 
 //1.5. Даны три целых числа. Напишите программу, печатающую Yes в том случае, если среди чисел есть одинаковые, иначе - No. - Правильно
 
-var equalnumbers = [4, 2, 2]
+var equalNumbers = [4, 2, 2]
 function printEqual () {
-    if (equalnumbers[0] === equalnumbers[1] || equalnumbers[0] === equalnumbers[2] || equalnumbers[1] === equalnumbers[2]){
+    if (equalNumbers[0] === equalNumbers[1] || equalNumbers[0] === equalNumbers[2] || equalNumbers[1] === equalNumbers[2]){
         console.log("Yes");
     }
     else {
@@ -129,7 +130,7 @@ function printEqual () {
 
 var naturalNumber = "54569803";
 function countNaturalDec (){
-    count =0;
+    var count =0;
     for (var i=0; i<naturalNumber.length; i++) {
         count++;
     }
@@ -137,11 +138,11 @@ function countNaturalDec (){
 }
 
 //1.7. Напишите программу, печатающую количество нулевых элементов в заданном целочисленном массиве. Правильно
-var nullElements = [2,0,5,6,2,0,7,8,5,0];
-count=0;
+var zeroElements = [2,0,5,6,2,0,7,8,5,0];
 function numberNullElements(){
-    for (var i=0; i<nullElements.length; i++) {
-        if (nullElements[i]===0)
+    var count=0;
+    for (var i=0; i<zeroElements.length; i++) {
+        if (zeroElements[i]===0)
             count++;
     }
     console.log("Number of null elements is "+count)
@@ -150,20 +151,31 @@ function numberNullElements(){
 
 //1.8. Напишите программу, которая заменяет все элементы массива, кроме крайних, на полусуммы соседей, и печатает результат.
 //что-то не то считаю
-var elements = [2,3,5,8,5,6,2,3,7,6,4,3,4,8];
-var n;
-function changeSum () {
-    for (var i = 1; i < elements.length - 1; i++) {
-        var n = (elements[i - 1] + elements[i + 1]) / 2;
-        console.log(n);
+var elements = [4,4,12,4];
+
+function changeSum_two_arrays () {
+    var result = new Array();
+    result[0] = elements[0];
+    result[elements.length-1] = elements[elements.length-1]
+
+    for (var i = 1; i < elements.length-1; i++) {
+        result[i] = (elements[i - 1] + elements[i + 1]) / 2;
+
     }
+    for(var i=0;i<result.length;i++) {
+        console.log(result[i])
+    }
+}
 
-    n[0]=elements[0];
-   n[length]=elements[length];
-        for (var i = 0; i < n.length; i++) {
-            console.log(n)
-        }
-
+function changeSum () {
+    for (var i = 1; i < elements.length-1; i++) {
+        var prev = elements[i - 1];
+        var next = elements[i + 1]
+        elements[i] = (prev + next) / 2;
+    }
+    for(var i=0;i<elements.length;i++) {
+        console.log(elements[i])
+    }
 }
 
 //1.9. Напишите программу, перемножающую два натуральных числа, и которая не использует операции умножения. В данном случае правильно,
@@ -179,13 +191,11 @@ function multipleWithoutMultiple() {
 // без испопользования вызова функции возведения в степень.  - Неправильно. как это реализуется???
 var a = 4;
 var n = [4, 4, 4, 4, 4];
-var z;
+
 function rateMultiple () {
+    var z;
     for (var i=0; i< n.length; i++) {
-
-
         var z = a *n[0];
-
     }
     console.log(z)
 }
@@ -193,8 +203,8 @@ function rateMultiple () {
 
 //1.11. Напишите программу, печатающую максимальный элемент заданного массива. - Правильно
 var array =[3,5,7,2,4,0,6,6,8]
-var  max = array[0];
 function mathMax(){
+    var  max = array[0];
     for (var i = 0; i<array.length; i++){
         if(array[i]>max){
             max = array[i];
