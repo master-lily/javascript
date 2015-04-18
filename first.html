@@ -2,62 +2,63 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    /почитатьо стилях сss, отображаемых на странице html
+    <style type="text/css">
+        ol>li{
+            display:block
+        }
+        ol>li:before{
+            content:counters(item,".") ". ";
+            counter-increment:item
+        }
+        ol{
+            counter-reset:item
+        }
+    </style>
     <title></title>
+
 </head>
 <body>
 <script type="application/javascript" src="first.js"></script>
 <script type="application/javascript" src="common.js"></script>
-<a href="#" onclick="zeroCounterDisplay()">click me</a>
-<p><a href="#" onclick="summ()">summ</a></p>
-<p> <a href="#" onclick="printEqualElements ()">1.1 find equal numbers</a></p>
-<p> <a href="#" onclick="printMathMax ()">1.3 count max numbers</a></p>
-<p> <a href="#" onclick="zeroCounterDisplay ()">number of null elements</a></p>
-<p> <a href="#" onclick="congratulation ()">1.4 congratulations</a></p>
-<p> <a href="#" onclick="printEqual ()">1.5 find equal numbers:Yes/No</a></p>
-<p> <a href="#" onclick="countNaturalDec ()">1.6 find number of figures in dec. natural number </a></p>
-<p> <a href="#" onclick="numberNullElements ()">1.7 find number of null elements </a></p>
-<p> <a href="#" onclick="changeSum  ()">1.8 change elements on half-sum of neighborhoods, excluding  first and last <strong>что-то не то считаю</strong></a></p>
-
-<p> <a href="#" onclick="multipleWithoutMultiple(getIntegerValue('Input first number'),getIntegerValue('Input second number'))">1.9 find multiplying of 2 natural numbers without multiplying </a></p>
-<p> <a href="#" onclick="rateMultiple  ()">1.10 find rate a in n without function rate</a></p>
-<p> <a href="#" onclick="mathMax()">1.11 find max number</a></p>
-<p> <a href="#" onclick="firstNumber  ()">1.12 print number of first element or 0</a></p>
-<p> <a href="#" onclick="secondMathMax()">1.13 find second max number</a></p>
-<p> <a href="#" onclick="sumSequence ()">1.14 find sum of sequence</a></p>
-<p> <a href="#" onclick="mathOperations()">1.15 make math operations</a></p>
-<p> <a href="#" onclick="averageArithmeticSquareModule()">1.16 find average  of squares and modules of 2 numbers</a></p>
-<p> <a href="#" onclick="truth  ()">1.17 check on truth of sentence</a></p>
-<p> <a href="#" onclick="avArithmetic ()">1.18 print average arithmetic </a></p>
-
-<p> <a href="#" onclick="season()">1.19 display a season of the year from the month</a></p>
-<p> <a href="#" onclick="nameFigure()">1.21 display the name of number in Russian</a></p>
-<p> <a href="#" onclick="numberMark()">1.22 display number and mark</a></p>
 
 <p> <a href="#" onclick="getIntegerArray('some numbers for test ')">test111</a></p>
 
 <ol>
     <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
-    <li>
-        <a href="#" onclick="season()">1.19 display a season of the year from the month</a>
-    </li>
+        <ol>
+            <li> <a href="#" onclick="printEqualElements ()"> 1.1. find equal numbers</a></li>
 
+            <li></li>
+
+            <li><a href="#" onclick="printMathMax ()">1.3. count max numbers</a></li>
+            <li><a href="#" onclick="congratulation ()">1.4. congratulations</a></li>
+            <li><a href="#" onclick="printEqual ()">1.5. find equal numbers:Yes/No</a></li>
+            <li> <a href="#" onclick="countNaturalDec ()">1.6. find number of figures in dec. natural number </a></li>
+            <li><a href="#" onclick="numberNullElements ()">1.7 find number of null elements </a></li>
+            <li><a href="#" onclick="changeSum  ()">1.8 change elements on half-sum of neighborhoods, excluding  first and last </a></li>
+            <li><a href="#" onclick="multipleWithoutMultiple(getIntegerValue('Input first number'),getIntegerValue('Input second number'))">1.9 find multiplying of 2 natural numbers without multiplying </a></li>
+            <li><a href="#" onclick="rateMultiple  ()">1.10 find rate a in n without function rate</a></li>
+            <li> <a href="#" onclick="mathMax()">1.11 find max number</a></li>
+            <li><a href="#" onclick="firstNumber  ()">1.12 print number of first element or 0</a></li>
+
+            <li> <a href="#" onclick="secondMathMax()">1.13 find second max number</a></li>
+            <li><a href="#" onclick="sumSequence ()">1.14 find sum of sequence</a></li>
+            <li><a href="#" onclick="mathOperations()">1.15 make math operations</a></li>
+            <li><a href="#" onclick="averageArithmeticSquareModule()">1.16 find average  of squares and modules of 2 numbers</a></li>
+            <li><a href="#" onclick="numberNullElements ()">1.7 find number of null elements </a></li>
+            <li><a href="#" onclick="avArithmetic ()">1.18 print average arithmetic </a></li>
+            <li><a href="#" onclick="season()">1.19 display a season of the year from the month</a></li>
+
+            <li></li>
+
+            <li><a href="#" onclick="nameFigure()">1.21 display the name of number in Russian</a></li>
+            <li><a href="#" onclick="numberMark()">1.22 display number and mark</a></li>
+
+
+
+        </ol>
+    </li>
 </ol>
 </body>
 </html>
