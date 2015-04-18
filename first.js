@@ -22,7 +22,7 @@ function sayIfEqualExists(){
     }
 }
 
-var numbers = [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,0]
+var numbers = [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,0];
 numbers[0] = 10;
 
 function zeroCounter(){
@@ -85,24 +85,40 @@ function zeroCounterDisplay() {
 }
 
 //1.2 Даны три целых числа. Придумайте алгоритм, который находит второе по величине число, если оно существует.
+//Правильно. - Достаточно одного цикла и if, else if.
 
-//1.3. Даны три целых числа. Придумайте алгоритм, определяющий количество максимальных чисел среди введенных. - неправильно. Как делать второй цикл, то есть,
-// определить массив, с которым будем производить операции???
+function secondMaxNumber () {
+    var array = [6,3,9];
+    var max = array[0];
+    var secondMax=array[1];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+
+                else if (secondMax<max) {
+                    secondMax=array[i];
+                }
+
+            }
+    console.log(secondMax)
+    }
+
+
+//1.3. Даны три целых числа. Придумайте алгоритм, определяющий количество максимальных чисел среди введенных. - Правильно.
+//Делаем count в цикле, сразу после вычисления нахождения числа!!! или правильнее его делать за пределами цикла???
 
 var array =[3,5,7,2,4,0,6,6,8]
 
 function printMathMax(){
     var  max = array[0];
-    var count = 0;
     for (var i = 0; i<array.length; i++){
         if(array[i]>max){
             max = array[i];
-
-        }
-       var count = 0;
-        for (j=0; j<max.length; j++) {
+            var count = 0;
             count++;
         }
+
     }
     console.log(count);
 }
@@ -150,7 +166,7 @@ function numberNullElements(){
 
 
 //1.8. Напишите программу, которая заменяет все элементы массива, кроме крайних, на полусуммы соседей, и печатает результат.
-//что-то не то считаю
+//Правильно. - Можно реализовать несколькими путями: через новый массив, и в том же массиве, введя две локальных переменных в цикле
 var elements = [4,4,12,4];
 
 function changeSum_two_arrays () {
@@ -188,14 +204,16 @@ function multipleWithoutMultiple(x,y) {
 }
 
 //1.10. Дано целое число a и натуральное n. Напишите программу, вычисляющую и печатающую  а в n-ой степени
-// без испопользования вызова функции возведения в степень.  - Неправильно. как это реализуется???
-var a = 4;
-var n = [4, 4, 4, 4, 4];
+//Правильно. Делаеется аналогично, как и с умножением через сложение, только в результате знак "+" заменяем на знак"*"
+// и результирующей переменной присваиваем значение "1" вместо значения "0"
+
 
 function rateMultiple () {
-    var z;
-    for (var i=0; i< n.length; i++) {
-        var z = a *n[0];
+    var a = 4;
+    var n = 7;
+    var z=1;
+    for (var i=0; i< n; i++) {
+        z *= a;
     }
     console.log(z)
 }
@@ -231,7 +249,35 @@ function firstNumber () {
 }
 
 //1.13. Задан массив целых чисел. Напишите программу, печатающую второй по величине ее элемент,
-// и No, если такого элемента нет.
+// и No, если такого элемента нет. - Неправильно. - Как реализовать ответ "нет"???
+function secondMathMax() {
+    var array = [5, 7, 11, 10];
+    var maxNumber = array[0];
+    var secondMaxNumber = array[1];
+    for (var i = 0; i < array.length; i++) {
+var addNumber =array[i];
+        if (addNumber > maxNumber){
+         maxNumber=secondMaxNumber;
+           maxNumber=addNumber;
+       }
+        if (addNumber<maxNumber && addNumber>secondMaxNumber){
+            secondMaxNumber=addNumber;
+            console.log("The second number after max is " +secondMaxNumber);
+        }
+        else{
+            console.log("no")
+        }
+        }
+
+        }
+
+
+
+
+
+
+
+
 
 
 //1.14. Дана последовательность чисел. Вычислить их сумму.  - Правильно, пишем сразу cоnsol.log, а не return и тогда получаем результат
@@ -330,7 +376,8 @@ function season () {
 //1.21. Дано целое число в диапазоне 0 – 9. Вывести строку — название соответствующей цифры на русском языке
 // (0 — "ноль", 1 — "один", 2 — "два", ...). - правильно. Why does it display only "5"???
 
-var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+var integer = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 function nameFigure () {
     switch (number) {
         case 0:
@@ -370,6 +417,7 @@ function nameFigure () {
 
 //1.22. Дано целое число в диапазоне 1 – 5. Вывести строку — словесное описание соответствующей оценки
 // (1 — "плохо", 2 — "неудовлетворительно", 3 — "удовлетворительно", 4 — "хорошо", 5 — "отлично"). - Why does it display only "отлично"???
+
 
 var number = (1, 2, 3, 4, 5);
 function numberMark () {
