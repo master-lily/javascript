@@ -14,3 +14,10 @@ function getIntegerArray(message){
     }
     return result;
 }
+
+function swap(x,y){
+    var temp = x;
+    x = y;
+    y = temp;
+    console.log("x = "+ x +" y = " + y)
+}
