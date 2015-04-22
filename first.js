@@ -5,9 +5,8 @@ function hi(){
     alert('Hi')
 }
 
-var arr=[3,4,3]
-
 function equalityTest(){
+    var arr=[3,4,3];
     if(arr[0] == arr[1]) return true;
     if(arr[1] == arr[2]) return true;
     if(arr[2] == arr[0]) return true;
@@ -22,10 +21,11 @@ function sayIfEqualExists(){
     }
 }
 
-var numbers = [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,0];
-numbers[0] = 10;
+
 
 function zeroCounter(){
+    var numbers = [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,0];
+    numbers[0] = 10;
     var count = 0;
     for(var i=0; i<numbers.length;i++){
         if(numbers[i] == 0) {
@@ -55,8 +55,9 @@ function zeroCounterDisplay(){
 }
 
 //1.1. Даны три целых числа. Придумайте алгоритм, определяющий, есть ли среди чисел одинаковые или нет. - Правильно
-var equalNumbers = [5,6,6]
+
 function printEqualElements () {
+    var equalNumbers = [5,6,6];
     if (equalNumbers[0] === equalNumbers[1] || equalNumbers[0] === equalNumbers[2] || equalNumbers[1] === equalNumbers[2]){
         console.log("Equal");
     }
@@ -106,20 +107,25 @@ function secondMaxNumber () {
 
 
 //1.3. Даны три целых числа. Придумайте алгоритм, определяющий количество максимальных чисел среди введенных. - Правильно.
-//Делаем count в цикле, сразу после вычисления нахождения числа!!! или правильнее его делать за пределами цикла???
+//Делаем count во втором цикле.
 
+function printMathMax() {
+    var array = [3, 5, 7, 2, 4, 0, 6, 6, 8, 8]
+    var max = array[0];
 
-
-function printMathMax(){
-    var array =[3,5,7,2,4,0,6,6,8,8]
-    var  max = array[0];
-    var count = 0;
-    for (var i = 0; i<arraym.length; i++) {
+    for (var i = 0; i < array.length; i++) {
         if (array[i] > max) {
             max = array[i];
+        }
     }
-    console.log(count);
+        var count = 0;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i]==max){
+                count++;
+            }
+        }
 
+    console.log(count);
 }
 
 //1.4. Напишите программу, печатающее на экран красивое поздравление с новым учебным годом. - Правильно
@@ -129,8 +135,8 @@ function congratulation(){
 
 //1.5. Даны три целых числа. Напишите программу, печатающую Yes в том случае, если среди чисел есть одинаковые, иначе - No. - Правильно
 
-var equalNumbers = [4, 2, 2]
 function printEqual () {
+    var equalNumbers = [4, 2, 2];
     if (equalNumbers[0] === equalNumbers[1] || equalNumbers[0] === equalNumbers[2] || equalNumbers[1] === equalNumbers[2]){
         console.log("Yes");
     }
@@ -143,8 +149,8 @@ function printEqual () {
 //1.6. Напишите программу, печатающую количество цифр в десятичной записи заданного натурального числа.
 // Правильно
 
-var naturalNumber = "54569803";
 function countNaturalDec (){
+    var naturalNumber = "54569803";
     var count =0;
     for (var i=0; i<naturalNumber.length; i++) {
         count++;
@@ -153,8 +159,9 @@ function countNaturalDec (){
 }
 
 //1.7. Напишите программу, печатающую количество нулевых элементов в заданном целочисленном массиве. Правильно
-var zeroElements = [2,0,5,6,2,0,7,8,5,0];
+
 function numberNullElements(){
+    var zeroElements = [2,0,5,6,2,0,7,8,5,0];
     var count=0;
     for (var i=0; i<zeroElements.length; i++) {
         if (zeroElements[i]===0)
@@ -185,7 +192,7 @@ function changeSum_two_arrays () {
 function changeSum () {
     for (var i = 1; i < elements.length-1; i++) {
         var prev = elements[i - 1];
-        var next = elements[i + 1]
+        var next = elements[i + 1];
         elements[i] = (prev + next) / 2;
     }
     for(var i=0;i<elements.length;i++) {
@@ -219,8 +226,9 @@ function rateMultiple () {
 
 
 //1.11. Напишите программу, печатающую максимальный элемент заданного массива. - Правильно
-var array =[3,5,7,2,4,0,6,6,8]
+
 function mathMax(){
+    var array =[3,5,7,2,4,0,6,6,8];
     var  max = array[0];
     for (var i = 0; i<array.length; i++){
         if(array[i]>max){
@@ -236,8 +244,8 @@ function mathMax(){
 //1.12. Задан массив целых чисел. Напишите программу, печатающую номер первого элемента, равного нулю,
 // и нуль при отсутствии такого элемента. - Правильно
 
-var numberArray = [5,4,4,1,1,5,47,3,4,5,5,7]
 function firstNumber () {
+    var numberArray = [5,4,4,1,1,5,47,3,4,5,5,7];
     if (numberArray[0] === 0) {
         console.log(numberArray[0])
     }
@@ -254,11 +262,11 @@ function secondMathMax() {
     var maxNumber = array[0];
     var secondMaxNumber = array[1];
     for (var i = 0; i < array.length; i++) {
-var addNumber =array[i];
+        var addNumber =array[i];
         if (addNumber > maxNumber){
-         maxNumber=secondMaxNumber;
-           maxNumber=addNumber;
-       }
+            maxNumber=secondMaxNumber;
+            maxNumber=addNumber;
+        }
         if (addNumber<maxNumber && addNumber>secondMaxNumber){
             secondMaxNumber=addNumber;
             console.log("The second number after max is " +secondMaxNumber);
@@ -266,17 +274,9 @@ var addNumber =array[i];
         else{
             console.log("no")
         }
-        }
+    }
 
-        }
-
-
-
-
-
-
-
-
+}
 
 
 //1.14. Дана последовательность чисел. Вычислить их сумму.  - Правильно, пишем сразу cоnsol.log, а не return и тогда получаем результат
@@ -308,9 +308,10 @@ function mathOperations() {
 }
 
 //1.16. Даны два числа. Найти среднее арифметическое их квадратов и среднее арифметическое их модулей. - Правильно
-var a = 10;
-var b = 6;
+
 function averageArithmeticSquareModule () {
+    var a = 10;
+    var b = 6;
     var avgSquare=((a*a)+(b*b))/2;
     var avgMod=(Math.abs(a)+Math.abs(b)/2);
     console.log("среднее арифметическое " + avgSquare);
@@ -320,9 +321,11 @@ function averageArithmeticSquareModule () {
 
 
 //1.17. Проверить истинность высказывания: "Среди трех данных целых чисел есть хотя бы одна пара совпадающих". -Правильно
-var logica ="Среди трех данных целых чисел есть хотя бы одна пара совпадающих";
+
 function truth (){
-    if ("Среди трех данных целых чисел есть хотя бы одна пара совпадающих" === "Среди трех данных целых чисел есть хотя бы одна пара совпадающих") {
+    var logica =[7,5,4];
+    for (var i=0; i<logica.length; i++){
+    if (logica[0]===logica[1]||logica[1]===logica[2] ||logica[0]===logica[2]) {
         console.log(true)
     }
     else {
@@ -330,14 +333,13 @@ function truth (){
 
     }
 }
-
+}
 
 
 //1.18. Даны десять чисел. Вывести их среднее арифметическое. - Правильно
 
-var tenNumbers = [2, 6, 4, 8, 2, 5, 5, 2, 3, 9];
-
 function avArithmetic () {
+    var tenNumbers = [2, 6, 4, 8, 2, 5, 5, 2, 3, 9];
     var sum = 0;
     for (var i = 0; i<tenNumbers.length; i++){
         sum+= tenNumbers[i]
@@ -350,9 +352,10 @@ function avArithmetic () {
 
 //1.19. Дан номер месяца (1 — январь, 2 — февраль, ...). Вывести название соответствующего времени года
 // ("зима", "весна" и т.д.). - Правильно
-var date;
-date = new Date(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+
 function season () {
+    var date;
+    date = new Date(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
     for (var i = 0; i < 12; i++) {
         if (i < 2 || i == 11) {
             console.log("winter");
@@ -376,8 +379,9 @@ function season () {
 // (0 — "ноль", 1 — "один", 2 — "два", ...). - правильно. Why does it display only "5"???
 
 
-var integer = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 function nameFigure () {
+    var integer = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     switch (number) {
         case 0:
             console.log(0 + "- ноль");
@@ -418,8 +422,9 @@ function nameFigure () {
 // (1 — "плохо", 2 — "неудовлетворительно", 3 — "удовлетворительно", 4 — "хорошо", 5 — "отлично"). - Why does it display only "отлично"???
 
 
-var number = (1, 2, 3, 4, 5);
+
 function numberMark () {
+    var number = (1, 2, 3, 4, 5);
     switch (number) {
         case 1:
             console.log(1 + "- плохо");
